@@ -24,7 +24,7 @@ left_frame = Frame(
 
 centre_frame = Frame(
     root,
-    bg='green',
+    bg='blue',
     width=settings.w_pc(75),
     height=settings.h_pc(75)
 )

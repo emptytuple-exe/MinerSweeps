@@ -15,8 +15,8 @@ class Cell:
 
     def left_click_actions(self, event):
         print(event)
-        print("I am left-clicked") 
+        print("I have been left-clicked") 
     
     def right_click_actions(self, event):
         print(event)
-        print("I am right clicked")
+        print("I have been right clicked")
