@@ -1,6 +1,6 @@
 from tkinter import *
 import settings
-from cells import Cell
+from cells import Celgit l
 
 root = Tk()
 root.configure(bg="black") #sets colour of background
@@ -58,12 +58,13 @@ c1.cell_btn_object.grid(
 )
 '''
 
-for i in range(settings.gsize):
-    for j in range(settings.gsize):
-        c=Cell()
+for x in range(settings.gsize):
+    for y in range(settings.gsize):
+        c=Cell(x, y)
         c.cr_button_obj(centre_frame)
         c.cell_btn_object.grid(
-            column=i, row=j
+            column=x, row=y
         )   
+Cell.randomise_mines()
 
 root.mainloop() #runs window
