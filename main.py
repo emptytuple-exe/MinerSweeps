@@ -1,6 +1,6 @@
 from tkinter import *
 import settings
-from cells import Celgit l
+from cells import Cell
 
 root = Tk()
 root.configure(bg="black") #sets colour of background
@@ -14,6 +14,7 @@ top_frame = Frame(
     width=settings.winwidth,
     height=settings.h_pc(25)
 )
+top_frame.place(x=0, y=0)
 
 left_frame = Frame(
     root,
@@ -21,17 +22,27 @@ left_frame = Frame(
     width=settings.w_pc(25),
     height=settings.h_pc(75)
 )
+left_frame.place(x=0, y=settings.h_pc(25))
 
 centre_frame = Frame(
     root,
     bg='blue',
     width=settings.w_pc(75),
-    height=settings.h_pc(75)
+    height=settings.h_pc(75),
 )
-
-top_frame.place(x=0, y=0)
-left_frame.place(x=0, y=settings.h_pc(25))
 centre_frame.place(x=settings.w_pc(25), y=settings.h_pc(25))
+
+game_title=Label(
+    top_frame,
+    bg='red',
+    fg='black',
+    text=settings.game_title,
+    font=('Courier New CYR', 48),
+)
+game_title.place(
+    x=settings.w_pc(25),
+    y=10
+)
 
 '''
 btn1= Button(
@@ -65,6 +76,9 @@ for x in range(settings.gsize):
         c.cell_btn_object.grid(
             column=x, row=y
         )   
+
+Cell.create_cell_count_label(left_frame)
+Cell.cell_count_label_object.place(x=0, y=0)
 Cell.randomise_mines()
 
 root.mainloop() #runs window

@@ -1,7 +1,9 @@
+game_title="MineSweeper"
 winwidth=800
 winheight=400
 gsize=6
-mine_count=(gsize**2)//4
+cellcount=gsize**2
+mine_count=(cellcount)//4
 
 def h_pc(perc):
     return(winheight/100)*perc
