@@ -1,6 +1,6 @@
 from tkinter import *
 import settings
-from cells import Celgit l
+from cells import Cell
 
 root = Tk()
 root.configure(bg="black") #sets colour of background
