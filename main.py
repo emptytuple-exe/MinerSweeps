@@ -4,6 +4,7 @@ from cells import Cell
 
 root = Tk()
 root.configure(bg="black") #sets colour of background
+
 root.geometry(f'{settings.winwidth}x{settings.winheight}') #sets size of background
 root.title('Mine') #sets title of GUI window
 root.resizable(False, False) #controls whether (width, height) of window can be altered
