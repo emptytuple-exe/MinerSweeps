@@ -45,6 +45,7 @@ class Cell:
         print(event, "Left click done in cell.")
         if self.is_mine:
             self.show_mine()
+            import closepage
             print("Mine found in cell")
         else:
             if self.sir_cells_mine == 0:
@@ -101,8 +102,9 @@ class Cell:
 
     def show_mine(self):
         self.cell_btn_object.configure(bg='red')
-        messagebox.showwarning("Game Over","You clicked on a mine")
-        sys.exit()
+        #messagebox.showwarning("Game Over","You clicked on a mine")
+        #import closepage
+
 
     def right_click_actions(self, event):
         print(event)
