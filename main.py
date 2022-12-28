@@ -87,4 +87,3 @@ def ultra():
     Cell.randomise_mines()
 
     root.mainloop() #runs window
-ultra()
