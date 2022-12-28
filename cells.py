@@ -1,7 +1,7 @@
 from tkinter import Button, Label, messagebox
 import random
 import settings
-import sys
+import closepage
 
 class Cell:
     all=list()
@@ -24,8 +24,8 @@ class Cell:
         btn = Button(
             loc,
             #text=f'{self.x}, {self.y}',
-            width=6,
-            height=2,
+            width=10,
+            height=3,
         )
         btn.bind('<Button-1>', self.left_click_actions)
         btn.bind('<Button-3>', self.right_click_actions)
@@ -45,7 +45,7 @@ class Cell:
         print(event, "Left click done in cell.")
         if self.is_mine:
             self.show_mine()
-            import closepage
+            closepage.mega()
             print("Mine found in cell")
         else:
             if self.sir_cells_mine == 0:

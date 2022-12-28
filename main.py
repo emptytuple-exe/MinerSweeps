@@ -15,17 +15,17 @@ def ultra():
         root,
         bg='red',
         width=settings.winwidth,
-        height=settings.h_pc(25)
+        height=settings.h_pc(10)
     )
     top_frame.place(x=0, y=0)
 
     left_frame = Frame(
         root,
         bg='blue',
-        width=settings.w_pc(25),
-        height=settings.h_pc(75)
+        width=settings.w_pc(20),
+        height=settings.h_pc(80)
     )
-    left_frame.place(x=0, y=settings.h_pc(25))
+    left_frame.place(x=0, y=settings.h_pc(10))
 
     centre_frame = Frame(
         root,
@@ -40,11 +40,13 @@ def ultra():
         bg='red',
         fg='black',
         text=settings.game_title,
-        font=('Courier New CYR', 48),
+        font=('Courier', 48),
     )
+
+    
     game_title.place(
-        x=settings.w_pc(25),
-        y=10
+        x=settings.w_pc(30),
+        y=15
     )
 
     '''
@@ -81,7 +83,7 @@ def ultra():
             )   
 
     Cell.create_cell_count_label(left_frame)
-    Cell.cell_count_label_object.place(x=0, y=0)
+    Cell.cell_count_label_object.pack()
     Cell.randomise_mines()
 
     root.mainloop() #runs window

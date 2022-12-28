@@ -1,12 +1,13 @@
 from tkinter import *
 from PIL import Image, ImageTk
-#from main import ultra
+from main import ultra
+import settings
 
 hi = Tk()
-hi.geometry("500x700")
+hi.geometry(f'{settings.winwidth}x{settings.winheight}')
 hi.configure(bg="light blue")
 
-image1 = Image.open("miner.jpg")
+image1 = Image.open("images/miner.jpg")
 test = ImageTk.PhotoImage(image1)
 label2=Label(hi,text="Minesweeper",font=("Times New Roman",45),bg="light green",fg="purple")
 
@@ -14,10 +15,11 @@ label2=Label(hi,text="Minesweeper",font=("Times New Roman",45),bg="light green",
 def test2win():
     hi.destroy()
     hi2 = Tk()
-    hi2.geometry("800x700")
+    print(f'{settings.winwidth}x{settings.winheight}')
+    hi2.geometry(f'{settings.winwidth}x{settings.winheight}')
     hi2.configure(bg="light blue")
 
-    image2 = Image.open("biggerminer.jpg")
+    image2 = Image.open("images/biggerminer.jpg")
 
     resized=image2.resize((400,300),Image.ANTIALIAS)
 
@@ -34,7 +36,8 @@ def test2win():
 
     def mainwin():
         hi2.destroy()
-        import main
+        #import main
+        ultra()
     label3=Button(hi2,text="Click Here To Begin Playing",font=("Times New Roman",20),bg="white",fg="purple", command=mainwin)
 
     label1 =Label(image=test)
