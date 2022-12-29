@@ -1,7 +1,8 @@
 from tkinter import Button, Label, messagebox
 import random
 import settings
-import closepage
+from closepage import mega
+from threading import Timer
 
 class Cell:
     all=list()
@@ -45,7 +46,10 @@ class Cell:
         print(event, "Left click done in cell.")
         if self.is_mine:
             self.show_mine()
-            closepage.mega()
+            #root.after(10000, mega)
+            t = Timer(0.5, mega)
+            t.start()
+
             print("Mine found in cell")
         else:
             if self.sir_cells_mine == 0:

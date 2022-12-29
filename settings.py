@@ -1,7 +1,7 @@
 game_title="MineSweeper"
-winwidth=1600
-winheight=800
-gsize=6
+winwidth=1200  #best kept at 1200
+winheight=600  #best kept at 600
+gsize=6        #best kept at 6
 cellcount=gsize**2
 mine_count=(cellcount)//4
 
