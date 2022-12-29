@@ -1,7 +1,7 @@
 from tkinter import Button, Label, messagebox
 import random
 import settings
-from closepage import mega
+from closepage import mega, mini
 from threading import Timer
 
 class Cell:
@@ -57,7 +57,10 @@ class Cell:
                     cell_obj.show_cell()
             self.show_cell()
             if Cell.cell_count == settings.mine_count:
-                messagebox.showwarning("Game Over","Congratulations! You won!")    
+                #messagebox.showwarning("Game Over","Congratulations! You won!")    
+                t = Timer(0.5, mini)
+                t.start()
+
         self.cell_btn_object.unbind('<Button-1>')
         self.cell_btn_object.unbind('<Button-3>')
 

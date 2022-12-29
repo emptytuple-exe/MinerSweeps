@@ -31,14 +31,18 @@ def mega():
     button1.place(x=400,y=225)
     label1.place(x=450, y=0)
 
-    #"you win" Window
-    """
-    label3=Label(image=test2)
-    label3.pack()
-    label4=Label(win,text="You've found all the mines!!",bg="white",fg='black',font=("Courier",30))
-    label4.place(x=450,y=350)
-    button3=Button(win,text="Okay",height=1,width=10,font=("Courier",30),bg="white",command=function_for_button2and3_click)
-    button3.place(x=550,y=500)
-    """
     win.mainloop()
-mega()
+
+def mini():
+    #"you win" Window
+    win=Tk()
+    win.geometry(f'{settings.winwidth}x{settings.winheight}')
+    label2=Label(win,text="You have found all the mines!",bg="white",fg='black',font=("Courier",35))
+    button1=Button(win,text="Play Again",height=1,width=10,font=("Courier",30),bg="white")
+    button2=Button(win,text="Exit",height=1,width=10,font=("Courier",30),bg="white")
+    
+    label2.place(x=200,y=150)
+    button2.place(x=700,y=225)
+    button1.place(x=400,y=225)
+
+    win.mainloop()
