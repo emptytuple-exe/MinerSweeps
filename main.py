@@ -1,6 +1,7 @@
 from tkinter import *
 import settings
 from cells import Cell
+from closepage import boom_resized
 
 def ultra():
         
@@ -87,3 +88,4 @@ def ultra():
     Cell.randomise_mines()
 
     root.mainloop() #runs window
+ultra()
