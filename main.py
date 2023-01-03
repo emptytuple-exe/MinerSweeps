@@ -1,11 +1,12 @@
 from tkinter import *
 import settings
 from cells import Cell
-from closepage import boom_resized
+#from closepage import boom_resized
 
 def ultra():
         
     root = Tk()
+    root.title("game :)")
     root.configure(bg="black") #sets colour of background
 
     root.geometry(f'{(settings.winwidth)}x{(settings.winheight)}') #sets size of background
@@ -88,4 +89,3 @@ def ultra():
     Cell.randomise_mines()
 
     root.mainloop() #runs window
-ultra()
