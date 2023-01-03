@@ -1,4 +1,4 @@
-from tkinter import Button, Label, messagebox
+from tkinter import Button, Label
 import random
 import settings
 from closepage import mega, mini
