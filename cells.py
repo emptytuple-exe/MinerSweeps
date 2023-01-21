@@ -46,10 +46,7 @@ class Cell:
         print(event, "Left click done in cell.")
         if self.is_mine:
             self.show_mine()
-            #root.after(10000, mega)
-            t = Timer(0.5, mega)
-            t.start()
-
+            mega()
             print("Mine found in cell")
         else:
             if self.sir_cells_mine == 0:
@@ -58,8 +55,7 @@ class Cell:
             self.show_cell()
             if Cell.cell_count == settings.mine_count:
                 #messagebox.showwarning("Game Over","Congratulations! You won!")    
-                t = Timer(0.5, mini)
-                t.start()
+                mini()
 
         self.cell_btn_object.unbind('<Button-1>')
         self.cell_btn_object.unbind('<Button-3>')
