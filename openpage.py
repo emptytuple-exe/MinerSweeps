@@ -31,7 +31,7 @@ def test2win():
 
     label4=Label(hi2,text="Rules",font=("Times New Roman",35),bg="light green",fg="purple")
     label5=Label(hi2,text="There are a set number of mines present in the given tiles. Select any tile to begin the game",font=("Times New Roman",14),bg="light green",fg="purple")
-    label6=Label(hi2,text="The goal of the gamr is to not cick on any mines",font=("Times New Roman",14),bg="light green",fg="purple")
+    label6=Label(hi2,text="The goal of the game is to not cick on any mines",font=("Times New Roman",14),bg="light green",fg="purple")
     label7=Label(hi2,text="There are a set number of mines present in the given tiles. Select ant tile to begin teh game",font=("Times New Roman",14),bg="light green",fg="purple")
     label8=Label(hi2,text="The numbers around certain blocks is tell the number of mines present around the block at any given time",font=("Times New Roman",14),bg="light green",fg="purple")
 

@@ -10,7 +10,7 @@ flagimage_resized=flagimage.resize((450,300))
 
 def mega():
     global boom_resized
-    win=Tk()
+    win=Toplevel()
     win.title("Game over")
     test = ImageTk.PhotoImage(boom_resized)
     flagimage = (Image.open("images/boom.jpg")) #importing 2nd image
@@ -64,4 +64,3 @@ def mini():
     button4.grid(column=2, row=2,padx=10,pady=10)
     frame2.place(relx=0.5, rely=0.5,anchor="center")
     win.mainloop()
-mini()
