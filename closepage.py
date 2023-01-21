@@ -64,4 +64,3 @@ def mini():
     button4.grid(column=2, row=2,padx=10,pady=10)
     frame2.place(relx=0.5, rely=0.5,anchor="center")
     win.mainloop()
-mini()
